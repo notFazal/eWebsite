@@ -151,7 +151,7 @@
         width: 100%;
         display: flex;
         justify-content: center;
-        padding: 20px 0;
+        padding: 20px 0px 0px 0px;
     }
     
     .header-navigation ul {
@@ -295,11 +295,11 @@
 
 
     .wrapper {
-        width: 100%;
-        padding: 20px 40px; /* Add left and right padding */
-        margin: 20px;
+        width: 95%;
+        padding: 20px 10px;
         background: var(--white);
         border-radius: 10px;
+        margin: 20px auto;
     }
 
     .wrapper .gallery {
@@ -307,6 +307,7 @@
         max-width: 1000px;
         margin: auto;
         padding: 0 60px;
+        box-sizing: border-box;
     }
 
     .gallery .card {
