@@ -103,6 +103,7 @@
         align-items: center;
         border-bottom: 1px solid var(--cultured);
         padding: 20px 0;  
+        background: var(--white);
     }
     
     .container {
@@ -258,7 +259,7 @@
     
     span { display: inline-block; }
     
-    html {
+    html, p {
         font-family: "Poppins", sans-serif;
         overscroll-behavior: contain;
     }
@@ -271,7 +272,7 @@
     
     input::placeholder { font: inherit; }
 
-    body { background: var(--white); }
+    body { background: rgb(244, 244, 244); }
 
     /** 
     * scrollbar style
@@ -295,7 +296,10 @@
 
     .wrapper {
         width: 100%;
-        padding: 20px 0;
+        padding: 20px 40px; /* Add left and right padding */
+        margin: 20px;
+        background: var(--white);
+        border-radius: 10px;
     }
 
     .wrapper .gallery {
