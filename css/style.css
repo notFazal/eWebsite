@@ -295,6 +295,7 @@
 
     .wrapper {
         width: 100%;
+        padding: 20px 0;
     }
 
     .wrapper .gallery {
@@ -353,4 +354,25 @@
     .owl-dot.active {
         background-color: var(--eerie-black) !important;
     }
-    
+    .owl-prev,
+    .owl-next {
+        position: absolute;
+        top: 45%;
+        transform: translate(-50%,-50%);
+    }
+    .owl-prev {
+        left:40px;
+    }
+    .owl-next {
+        right: 20px;
+    }
+    .fa-chevron-left,
+    .fa-chevron-right {
+        font-size: 30px;
+        color: var(--eerie-black);
+        transition: all 0.2s;
+    }
+    .fa-chevron-left:hover,
+    .fa-chevron-right:hover {
+        color: var(--sonic-silver);
+    }
