@@ -169,9 +169,58 @@
         color: var(--salmon-pink);
     }
     
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        margin: 20px auto;
+    }
     
+    .contact-form label {
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
     
+    .contact-form input, .contact-form textarea {
+        margin-bottom: 10px;
+        padding: 8px;
+        border: 1px solid var(--cultured);
+        border-radius: var(--border-radius-md);
+    }
+    
+    .contact-form button {
+        padding: 10px;
+        background-color: var(--salmon-pink);
+        color: white;
+        border: none;
+        border-radius: var(--border-radius-md);
+        cursor: pointer;
+    }
 
+    input[type="text"], input[type="email"], textarea {
+        width: 100%; 
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 16px; 
+        font-family: var(--fs-5);
+        resize: none; 
+    }
+    
+    textarea {
+        height: 150px
+    }
+    
+    textarea {
+        height: 200px; 
+    }
+
+    form {
+        min-width: 80%;
+        overflow-x: hidden; 
+        padding: 0 20px; 
+    }
     /*-----------------------------------*\
     #CATEGORY
     \*-----------------------------------*/

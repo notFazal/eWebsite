@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+        <!--
+            - custom css link
+        -->
+        <link rel="stylesheet" href="./css/style.css">
+
+        <!--
+            - google font link
+        -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+        <!--
+            - ionicon link
+        -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        
+</head>
+<body>
+    <header>
+        <div class="header-main">
+            <div class="container">
+                <a href="#" class="header-logo">
+                    <img src="./images/logo/logo.svg" alt="Logo" width="120" height="36">
+                </a>
+
+                <div class="header-search-container">
+                    <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
+                    <button class="search-btn">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </button>
+                </div>
+            </div>
+            <!-- Navigation Links -->
+            <nav class="header-navigation">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about-us">About Us</a></li>
+                    <li><a href="index.html#categories">Categories</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <form action="#" method="POST" class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
