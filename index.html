@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>eCommerce Website</title>
+        <title>eCommerce Website</title>
 
         <!--
             - custom css link
@@ -17,7 +18,11 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-            rel="stylesheet">
+        rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!--
             - ionicon link
         -->
@@ -25,7 +30,7 @@
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         
     </head>
-    <body>
+    <body> 
         
         <header>
             <div class="header-main">
@@ -35,7 +40,7 @@
                     </a>
         
                     <div class="header-search-container">
-                        <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
+                        <input type="search" name="search" class="search-field" placeholder="Search Products">
                         <button class="search-btn">
                             <ion-icon name="search-outline"></ion-icon>
                         </button>
@@ -53,8 +58,44 @@
                 </nav>
             </div>
         </header>
-        
-        
+        <div class="wrapper">
+            <div class="gallery owl-carousel">
+                <div class="card" id="c1"></div>
+                <div class="card" id="c2"></div>
+                <div class="card" id="c3"></div>
+                <div class="card" id="c4"></div>
+                <div class="card" id="c5"></div>
+                <div class="card" id="c6"></div>
+            </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-content">
+                <p></p>
+            </div>
+        </footer>
+        <script>
+            $(".gallery").owlCarousel({
+                loop: true,
+                margin: 25,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                nav: true,
+                navText: ["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"],
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    600: {
+                        items: 1,
+                    },
+                    1000: {
+                        items: 1,
+                    },
+                }
+            })
+        </script>
         <!--
             - javascript link
         -->
