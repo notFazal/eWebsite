@@ -4,14 +4,14 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>eCommerce Website</title>
+
         <title>eCommerce Website</title>
 
         <!--
             - custom css link
         -->
         <link rel="stylesheet" href="./css/style.css">
-
+        <link rel="stylesheet" type="text/css" href="css/glider.min.css">
         <!--
             - google font link
         -->
@@ -30,34 +30,33 @@
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         
     </head>
-    <body> 
-        
-        <header>
-            <div class="header-main">
-                <div class="container">
-                    <a href="#" class="header-logo">
-                        <img src="./images/logo/logo.svg" alt="Logo" width="120" height="36">
-                    </a>
-        
-                    <div class="header-search-container">
-                        <input type="search" name="search" class="search-field" placeholder="Search Products">
-                        <button class="search-btn">
-                            <ion-icon name="search-outline"></ion-icon>
-                        </button>
-                    </div>
+    <header>
+        <div class="header-main">
+            <div class="container">
+                <a href="#" class="header-logo">
+                    <img src="./images/logo/logo.svg" alt="Logo" width="120" height="36">
+                </a>
+    
+                <div class="header-search-container">
+                    <input type="search" name="search" class="search-field" placeholder="Search Products">
+                    <button class="search-btn">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </button>
                 </div>
-                <!-- Navigation Links -->
-                <nav class="header-navigation">
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about-us">About Us</a></li>
-                        <li><a href="#categories">Categories</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a id="contact-link" href="#contact-us">Contact Us</a></li>
-                    </ul>
-                </nav>
             </div>
-        </header>
+            <!-- Navigation Links -->
+            <nav class="header-navigation">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a id="contact-link" href="#contact-us">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <body> 
         <div class="wrapper">
             <div class="gallery owl-carousel">
                 <div class="card" id="c1"></div>
@@ -66,14 +65,175 @@
                 <div class="card" id="c4"></div>
                 <div class="card" id="c5"></div>
                 <div class="card" id="c6"></div>
+            </div>  
+        </div>
+
+        <div class="wrapper p-slider">
+            <h3 class="product-slider-heading">Products</h3>
+            <div class="slider-btns">
+                <button aria-label="Previous" class="glider-prev"><span></span></button>
+                <button aria-label="Next" class="glider-next"><span></span></button>
             </div>
+            <div class="glider-contain">
+                <div class="glider">
+                                <div class="product-box">
+                                    <span class="p-discount">-20%</span>
+                                    <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/product-images/p2.jpg" class="p-img-front" alt="Front">
+                                            <img src="./images/product-images/p2.jpg" class="p-img-back" alt="Back">
+                                        </a>
+                                    </div>
+                                    </div>
+                                    <div class="p-text-box">
+                                        <div class="product-category">
+                                            <span>Product Category</span>
+                                        </div>
+                                        <a href="#" class="product-title">
+                                            Product Name
+                                        </a>
+                                        <div class="price-buy">
+                                            <span class="p-price">$39.99</span>
+                                            <a href="#" class="p-buy-btn">Buy Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product-box">
+                                    <span class="p-discount">-20%</span>
+                                    <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/product-images/p2.jpg" class="p-img-front" alt="Front">
+                                            <img src="./images/product-images/p2.jpg" class="p-img-back" alt="Back">
+                                        </a>
+                                    </div>
+                                    </div>
+                                    <div class="p-text-box">
+                                        <div class="product-category">
+                                            <span>Product Category</span>
+                                        </div>
+                                        <a href="#" class="product-title">
+                                            Product Name
+                                        </a>
+                                        <div class="price-buy">
+                                            <span class="p-price">$39.99</span>
+                                            <a href="#" class="p-buy-btn">Buy Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="product-box">
+                                    <span class="p-discount">-20%</span>
+                                    <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/product-images/p2.jpg" class="p-img-front" alt="Front">
+                                            <img src="./images/product-images/p2.jpg" class="p-img-back" alt="Back">
+                                        </a>
+                                    </div>
+                                    </div>
+                                    <div class="p-text-box">
+                                        <div class="product-category">
+                                            <span>Product Category</span>
+                                        </div>
+                                        <a href="#" class="product-title">
+                                            Product Name
+                                        </a>
+                                        <div class="price-buy">
+                                            <span class="p-price">$39.99</span>
+                                            <a href="#" class="p-buy-btn">Buy Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product-box">
+                                    <span class="p-discount">-20%</span>
+                                    <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/product-images/p2.jpg" class="p-img-front" alt="Front">
+                                            <img src="./images/product-images/p2.jpg" class="p-img-back" alt="Back">
+                                        </a>
+                                    </div>
+                                    </div>
+                                    <div class="p-text-box">
+                                        <div class="product-category">
+                                            <span>Product Category</span>
+                                        </div>
+                                        <a href="#" class="product-title">
+                                            Product Name
+                                        </a>
+                                        <div class="price-buy">
+                                            <span class="p-price">$39.99</span>
+                                            <a href="#" class="p-buy-btn">Buy Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product-box">
+                                    <span class="p-discount">-20%</span>
+                                    <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/product-images/p2.jpg" class="p-img-front" alt="Front">
+                                            <img src="./images/product-images/p2.jpg" class="p-img-back" alt="Back">
+                                        </a>
+                                    </div>
+                                    </div>
+                                    <div class="p-text-box">
+                                        <div class="product-category">
+                                            <span>Product Category</span>
+                                        </div>
+                                        <a href="#" class="product-title">
+                                            Product Name
+                                        </a>
+                                        <div class="price-buy">
+                                            <span class="p-price">$39.99</span>
+                                            <a href="#" class="p-buy-btn">Buy Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="product-box">
+                                    <span class="p-discount">-20%</span>
+                                    <div class="p-img-container">
+                                    <div class="p-img">
+                                        <a href="#">
+                                            <img src="./images/product-images/p2.jpg" class="p-img-front" alt="Front">
+                                            <img src="./images/product-images/p2.jpg" class="p-img-back" alt="Back">
+                                        </a>
+                                    </div>
+                                    </div>
+                                    <div class="p-text-box">
+                                        <div class="product-category">
+                                            <span>Product Category</span>
+                                        </div>
+                                        <a href="#" class="product-title">
+                                            Product Name
+                                        </a>
+                                        <div class="price-buy">
+                                            <span class="p-price">$39.99</span>
+                                            <a href="#" class="p-buy-btn">Buy Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                </div>
             </div>
         </div>
+
         <footer class="footer">
             <div class="footer-content">
                 <p></p>
             </div>
         </footer>
+
+
+        
         <script>
             $(".gallery").owlCarousel({
                 loop: true,
@@ -81,8 +241,8 @@
                 autoplay: true,
                 autoplayTimeout: 5000,
                 autoplayHoverPause: true,
-                nav: true,
-                navText: ["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"],
+                //nav: true,
+                //navText: ["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"],
                 responsive: {
                     0: {
                         items: 1,
@@ -100,5 +260,62 @@
             - javascript link
         -->
         <script src="js/script.js"></script>
+        <script src="js/glider.min.js"></script>
+        <script>
+            new Glider(document.querySelector('.glider'), 
+            {
+                slidesToScroll: 1,
+                slidesToShow: 4,
+                draggable: true,
+                dots: '.dots',
+                arrows: {
+                    prev: '.glider-prev',
+                    next: '.glider-next'
+                },
+                responsive: 
+                [
+                    {
+                        // screens greater than >= 775px
+                        breakpoint: 1200,
+                        settings: {
+                        // Set to `auto` and provide item width to adjust to viewport
+                        slidesToShow: 4,
+                        slidesToScroll: 2,    
+                        }
+                    },
+                    {
+                        // screens greater than >= 1024px
+                        breakpoint: 900,
+                        settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 640,
+                        settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 304,
+                        settings: {
+                        slidesToShow: 1.5,
+                        slidesToScroll: 1,
+                        }
+                    },
+                    {
+                        // screens greater than >= 1024px
+                        breakpoint: 0,
+                        settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        }
+                    }
+                ]
+            }
+            );
+        </script>
     </body>
 </html>
