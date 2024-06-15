@@ -396,7 +396,6 @@
 
     .wrapper .gallery {
         position: relative;
-        max-width: 1000px;
         margin: auto;
         box-sizing: border-box;
     }
@@ -407,27 +406,19 @@
     }
 
     #c1 {
-        background: url(../images/placeholder/photo-icon.jpg) no-repeat center
+        background: url(../images/placeholder/h1.jpg) no-repeat center
         center/cover;
     }
     #c2 {
-        background: url(../images/placeholder/photo-icon.jpg) no-repeat center
+        background: url(../images/placeholder/h2.jpg) no-repeat center
         center/cover;
     }
     #c3 {
-        background: url(../images/placeholder/photo-icon.jpg) no-repeat center
+        background: url(../images/placeholder/h3.jpg) no-repeat center
         center/cover;
     }
     #c4 {
-        background: url(../images/placeholder/photo-icon.jpg) no-repeat center
-        center/cover;
-    }
-    #c5 {
-        background: url(../images/placeholder/photo-icon.jpg) no-repeat center
-        center/cover;
-    }
-    #c6 {
-        background: url(../images/placeholder/photo-icon.jpg) no-repeat center
+        background: url(../images/placeholder/h4.jpg) no-repeat center
         center/cover;
     }
     .owl-dots {
