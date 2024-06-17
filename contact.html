@@ -27,30 +27,27 @@
 </head>
 <body>
     <header>
-        <div class="header-main">
-            <div class="container">
-                <a href="#" class="header-logo">
-                    <img src="./images/logo/logo.svg" alt="Logo" width="120" height="36">
-                </a>
-
-                <div class="header-search-container">
-                    <input type="search" name="search" class="search-field" placeholder="Search Products">
-                    <button class="search-btn">
-                        <ion-icon name="search-outline"></ion-icon>
-                    </button>
-                </div>
+        <nav class="navbar">
+            <a href="#" class="logo"><img src="./images/logo/logo.svg" alt="Logo" width="120" height="36"></a>
+        <ul class="nav-menu">
+            <div class="header-search-container">
+                <input type="search" name="search" class="search-field" placeholder="Search Products">
+                <button class="search-btn" onclick="#">
+                    <ion-icon name="search-outline"></ion-icon>
+                </button>
             </div>
-            <!-- Navigation Links -->
-            <nav class="header-navigation">
-                <ul>
-                    <li><a href="index.html#home">Home</a></li>
-                    <li><a href="index.html#about-us">About Us</a></li>
-                    <li><a href="index.html#categories">Categories</a></li>
-                    <li><a href="index.html#products">Products</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
+            <li class="nav-item"><a href="#home">Home</a></li>
+            <li class="nav-item"><a href="#about-us">About</a></li>
+            <li class="nav-item"><a href="#categories">Categories</a></li>
+            <li class="nav-item"><a href="#products">Products</a></li>
+            <li class="nav-item"><a id="contact-link" href="#contact-us">Contact Us</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
+    </nav>
     </header>
     <div class="container">
         <form action="#" method="POST" class="contact-form" onsubmit="return validate(this)">

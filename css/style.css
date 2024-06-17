@@ -209,15 +209,15 @@
             position: fixed;
             left: -100%;
             top: 70px;
-            gap: 0;
+            gap: 10px;
             flex-direction: column;
             background-color: var(--first);
             width: 100%;
             text-align: center;
-            transition: 0.3s;
+            transition: 0.2s;
         }
         nav-item {
-            margin: 16px 0;;
+            margin-bottom: 20px;
         }
         .nav-menu.active {
             left: 0;
