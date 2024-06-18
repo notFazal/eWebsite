@@ -102,7 +102,8 @@
     header {
         background-color: var(--first);
         z-index: 1000;
-        
+        position: sticky;
+        top: 0;
     }
     .navbar {
         min-height: 70px;
@@ -110,14 +111,27 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 24px;
+        gap: 20px;
     }
+    .logo {
+        
+    }    
     .nav-menu{
         display: flex;
         justify-content: space-between;
         align-items: center ;
-        gap: 30px;
-        margin-right: 20px;
+        gap: 20px;
         flex: 1;
+    }
+    .nav-icon {
+        position: relative;
+        font-size: 36px;
+        align-self: center;
+        color: var(--onyx);
+    }
+    .nav-icon:hover {
+        color: var(--salmon-pink);
+        transition: 0.3s ease;
     }
     
     .nav-item a {
@@ -180,12 +194,11 @@
         display: inline-flex; /* Ensure inline alignment */
         align-items: center; /* Center align items vertically */
         border-bottom: 2px solid rgba(0, 0, 0, 0.2);;
+        padding-top: 2px;
         padding-bottom: 4px; /* Adjust padding for better alignment */
         transition: border-bottom-color 0.3s ease-in-out;
-        color: var(--onyx);
         flex-grow: 1;
         flex-shrink: 1;
-        max-width: 500px;
     }
     
     .header-search-container:after {
@@ -206,6 +219,7 @@
     /* Ensure search field has appropriate styles */
     .search-field {
         border: none;
+        color: var(--onyx);
         background-color: var(--first);
         flex: 1; /* Allow the search field to take up available space */
     }
@@ -398,7 +412,7 @@
         margin-right: 20px;
     }
 
-     .gallery {
+    .gallery {
         position: relative;
         margin: auto;
         box-sizing: border-box;
