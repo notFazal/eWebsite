@@ -102,6 +102,7 @@
     header {
         background-color: var(--first);
         z-index: 1000;
+        
     }
     .navbar {
         min-height: 70px;
@@ -175,21 +176,50 @@
         background-color: var(--onyx);
     }
     .header-search-container {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-    .search-field {
-        flex: 1;
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-    .search-btn ion-icon {
-        font-weight: 1000;
-        font-size: 20px;
+        position: relative;
+        display: inline-flex; /* Ensure inline alignment */
+        align-items: center; /* Center align items vertically */
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);;
+        padding-bottom: 4px; /* Adjust padding for better alignment */
+        transition: border-bottom-color 0.3s ease-in-out;
         color: var(--onyx);
+        flex-grow: 1;
+        flex-shrink: 1;
+        max-width: 500px;
+    }
+    
+    .header-search-container:after {
+        content: "";
+        position: absolute;
+        background-color: var(--salmon-pink);
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: -2px; /* Position the underline just below the container */
+        transition: width 0.2s ease-in-out;
+    }
+    
+    .header-search-container:focus-within:after {
+        width: 100%;
+    }
+    
+    /* Ensure search field has appropriate styles */
+    .search-field {
+        border: none;
+        background-color: var(--first);
+        flex: 1; /* Allow the search field to take up available space */
+    }
+    
+    .search-field:focus {
+        outline: none;
+    }
+    
+    .search-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        color: inherit; /* Inherit text color */
     }
     
     @media(max-width:768px) {
@@ -455,7 +485,7 @@
         width: 300px;
         padding: 15px;
         background-color: white;
-        border: 2px solid rgba(0,0,0,0.08);
+        border: 2px solid rgba(0, 0, 0, 0.2);
         border-radius: 10px;
         margin: 0px 20px;
         position: relative;
