@@ -67,6 +67,22 @@
 
     .container { padding: 0 15px; }
  
+    .has-scrollbar { padding-bottom: 5px; }
+
+    .has-scrollbar::-webkit-scrollbar {
+    width: 12px; 
+    height: 12px; 
+    }
+
+    .has-scrollbar::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: 3px solid var(--white);
+    border-radius: 20px;
+    }
+
+    .has-scrollbar:hover::-webkit-scrollbar-thumb { background: hsl(0, 0%, 90%); }
+
+    .has-scrollbar::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 80%); }
 
     /*-----------------------------------*\
     #HEADER
@@ -366,7 +382,7 @@
 
     body { 
         background-image: url('../images/bg.jpeg');
-        background-size: cover; /* Ensure the image covers the entire background */
+        background-size:cover; /* Ensure the image covers the entire background */
         background-repeat: no-repeat; /* Prevent the image from repeating */
         background-position: center; /* Center the image */
         margin: 0;
@@ -674,20 +690,11 @@
         }
     }
     @media (max-width: 500px) {
-        /* Styles for screens up to 500px */
-        .wrapper {
-          margin-left: 10px;
-          margin-right: 10px;
+        .nav-menu {
+            gap: 40px;
         }
-      
-        .product-nav-row {
-          margin-bottom: 10px;
-        }
-      
-        .slider-btns {
-          margin-top: 10px;
-        }
+        .gallery .card {
+            height: 200px;
+            border-radius: 8px;
+        } 
       }
-    @media screen and (max-width: 650px) {
-
-    }
