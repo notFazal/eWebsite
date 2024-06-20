@@ -11,8 +11,9 @@
         --spanish-gray: hsl(0, 0%, 60%);
         --sonic-silver: hsl(0, 0%, 47%);
         --eerie-black: hsl(0, 0%, 13%);
-        --salmon-pink: hsl(353, 100%, 78%);
-        --sandy-brown: hsl(29, 90%, 65%);
+        --salmon-pink: hsl(353, 100%, 62%);
+        --salmon-pink-og: hsl(353, 100%, 78%);
+        --sandy-brown: hsl(29, 90%, 54%);
         --bittersweet: hsl(0, 100%, 70%);
         --ocean-green: hsl(152, 51%, 52%);
         --davys-gray: hsl(0, 0%, 33%);
@@ -20,7 +21,8 @@
         --white: hsl(0, 100%, 100%);
         --onyx: hsl(0, 0%, 27%);
         --first: #f7fbfc; 
-        --first-transparent: rgba(247, 251, 252, 0.82);
+        --first-transparent: rgba(247, 251, 252, 0.56);
+        --first-transparent-2: rgba(255, 255, 255, 0.56);
         --second: #c7dded;
     
         /**
@@ -89,11 +91,15 @@
     \*-----------------------------------*/
     
     header {
-        background-color: var(--first-transparent);
+
         z-index: 1000;
         position: sticky;
         top: 0;
         width: 100%;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        background: var(--first-transparent);
+        backdrop-filter: blur(10px); /* Blur effect */
+        -webkit-backdrop-filter: blur(10px); /* For Safari */
     }
     .navbar {
         min-height: 70px;
@@ -124,7 +130,7 @@
         position: relative;
         font-size: 36px;
         align-self: center;
-        color: var(--onyx);
+        color: var(--eerie-black);
     }
     .nav-icon:hover {
         color: var(--salmon-pink);
@@ -136,26 +142,14 @@
         margin: 0 2px;
         font-weight: 600;
         padding: 8 18px;
-        color: var(--onyx);
+        color: var(--eerie-black);
         text-decoration: none;
         font-size: var(--fs-5);
         font-weight: var(--weight-500);
         letter-spacing: 0.5px;;
-        transition: 0.2s;
+        transition: all 0.2s ease;
         position: relative;
     }
-    
-    
-    .nav-item a {
-        color: var(--onyx);
-        text-decoration: none;
-        font-size: var(--fs-5);
-        font-weight: var(--weight-500);
-        letter-spacing: 0.5px;;
-        transition: 0.2s;
-        position: relative;
-    }
-    
     
     .nav-item a:after {
         content: "";
@@ -184,7 +178,7 @@
         margin: 5px auto;
         -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
-        background-color: var(--onyx);
+        background-color: var(--eerie-black);
     }
     .header-search-container {
         position: relative;
@@ -206,7 +200,7 @@
         width: 0;
         left: 0;
         bottom: -2px; /* Position the underline just below the container */
-        transition: width 0.2s ease-in-out;
+        transition: width 0.3s ease-in-out;
     }
     
     .header-search-container:focus-within:after {
@@ -237,7 +231,7 @@
         cursor: pointer;
         font-size: 20px;
         padding: 8px;
-        color: var(--onyx);
+        color: var(--eerie-black);
         font-weight: 1000;
     }
     .search-btn:hover {
@@ -269,7 +263,6 @@
             top: 70px;
             gap: 10px;
             flex-direction: column;
-            background-color: var(--first-transparent);
             width: 100%;
             text-align: center;
             transition: 0.2s;
@@ -381,7 +374,7 @@
     input::placeholder { font: inherit; }
 
     body { 
-        background-image: url('../images/bg.jpeg');
+        background-image: url('../images/bg2.jpg');
         background-size:cover; /* Ensure the image covers the entire background */
         background-repeat: no-repeat; /* Prevent the image from repeating */
         background-position: center; /* Center the image */
@@ -393,6 +386,8 @@
     }
     footer {
         background-color: var(--first-transparent);
+        backdrop-filter: blur(10px); /* Blur effect */
+        -webkit-backdrop-filter: blur(10px); /* For Safari */
         padding: 10px 0;
         text-align: center;
         width: 100%;
@@ -424,6 +419,8 @@
         max-width: var(--limit); /* Limit maximum width */
         padding: 20px; /* Padding inside the wrapper */
         background: var(--first-transparent); /* Background color */
+        backdrop-filter: blur(10px); /* Blur effect */
+        -webkit-backdrop-filter: blur(10px); /* For Safari */
         border-radius: 10px; /* Rounded corners */
         margin: 0 auto; /* Center horizontally */
         box-sizing: border-box; /* Include padding and border in width calculation */
@@ -509,7 +506,7 @@
     }
     .product-slider-heading {
         margin: 0px;
-        color: var(--onyx);
+        color: var(--eerie-black);
     }
 
     .product-box {
@@ -554,20 +551,19 @@
         margin-top: 5px;
         width: 100%;
     }
-    .product-category span {
-        color: var(--onyx);
+    .product-brand span {
+        color: var(--eerie-black);
         font-size: 0.9rem;
         margin: 5px 0px;
     }
     .product-title {
-        color: var(--onyx);
+        color: var(--eerie-black);
         font-weight: 600;
         text-decoration: none;
     }
-    .product-title:hover {
-        color: var(--onyx);
-        opacity: 0.7;
-        transition: all ease 0.3s;
+    .product-title:hover, .product-brand:hover {
+        color: var(--salmon-pink);
+        transition: all ease 0.2s;
     }
     .price-buy {
         display: flex;
@@ -615,8 +611,6 @@
         align-items: center;
         width: 100%;
         margin-bottom: 20px;
-        
-        
     }
     .slider-btns{
         display: flex;
@@ -632,16 +626,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 0px solid var(--onyx);
         border-radius: 5px;
         font-size: 30px;
         font-weight: 800;
-        color: var(--onyx);
-        transition: color 0.1s ease, font-size 0.1s ease;
+        color: var(--eerie-black);
+        transition: color 0.2s ease, font-size 0.2s ease, box-shadow 0.2s ease;
     }
     .slider-btns button:hover {
         font-size: 36px;
         color: var(--salmon-pink);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
     .slider-btns button ion-icon {
         transition: transform 0.1s ease-out; /* Smooth transition for transform */
