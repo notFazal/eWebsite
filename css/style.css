@@ -701,19 +701,6 @@
         color: var(--salmon-pink);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-    
     
     @media(max-width:500px) {
         .product-box{
@@ -762,13 +749,13 @@
         .product-feed {
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust grid columns for smaller screens */
         }
-    
         .feed-controls {
             flex-wrap: wrap; /* Allow controls to wrap to a new line if necessary */
             justify-content: flex-start; /* Adjust alignment to start for smaller screens */
         }
         .filters {
             margin-top: 10px;
+            gap: 10px;
         }
         
         .choice {
