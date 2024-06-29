@@ -21,9 +21,8 @@
         --white: hsl(0, 100%, 100%);
         --onyx: hsl(0, 0%, 27%);
         --first: #f7fbfc; 
-        --first-transparent: rgba(247, 251, 252, 0.58);
-        --first-transparent-2: rgba(255, 255, 255, 0.4);
-        --first-transparent-3: rgba(255, 255, 255, 0.89);        
+        --first-transparent: rgba(247, 251, 252, 0.56);
+        --first-transparent-2: rgba(255, 255, 255, 0.56);
         --second: #c7dded;
     
         /**
@@ -68,10 +67,7 @@
     #REUSED STYLE
     \*-----------------------------------*/
 
-    .container { 
-        padding: 0 15px; 
-    }
-
+    .container { padding: 0 15px; }
  
     .has-scrollbar { padding-bottom: 5px; }
 
@@ -144,6 +140,7 @@
     .nav-item a {
         display: block;
         margin: 0 2px;
+        font-weight: 600;
         padding: 8 18px;
         color: var(--eerie-black);
         text-decoration: none;
@@ -188,8 +185,8 @@
         display: inline-flex; /* Ensure inline alignment */
         align-items: center; /* Center align items vertically */
         border-bottom: 2px solid var(--onyx);
-        padding-top: 3px;
-        padding-bottom: 3px; /* Adjust padding for better alignment */
+        padding-top: 2px;
+        padding-bottom: 4px; /* Adjust padding for better alignment */
         transition: border-bottom-color 0.3s ease-in-out;
         flex-grow: 1;
         flex-shrink: 1;
@@ -224,7 +221,7 @@
         padding-left: 6px;
     }
     
-    .search-field:focus, .choice:focus {
+    .search-field:focus {
         outline: none;
     }
     
@@ -294,13 +291,14 @@
     .contact-form input, .contact-form textarea {
         margin-bottom: 10px;
         padding: 8px;
-
+        border: 2px solid --cultured;
+        border-radius: var(--border-radius-md);
     }
     
     .contact-form button {
         padding: 10px;
         background-color: var(--salmon-pink);
-        color: var(--first);
+        color: var(--eerie-black);
         font-weight: bold;
         border: none;
         border-radius: var(--border-radius-md);
@@ -308,7 +306,7 @@
         transition: 0.2s;
     }
     .contact-form button:hover {
-        background-color: var(--salmon-pink-og);
+        background-color: hsl(353, 100%, 92%);
     }
 
     input[type="text"], input[type="email"], textarea {
@@ -514,21 +512,16 @@
     .product-box {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 300px;
         padding: 15px;
         background-color:var(--first);
         border: 0px solid var(--sonic-silver);
         border-radius: 10px;
+        margin: 0px 20px;
         position: relative;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         transition: box-shadow 0.2s ease;
-        max-width: 250px;
-        box-sizing: border-box;
     }
-    .p-slider .product-box {
-        margin-right: 20px;
-    }
-
     .product-box:hover {
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Darker and larger shadow on hover */
     }
@@ -591,9 +584,6 @@
     .price-buy .p-buy-btn:hover{
         text-decoration: underline;
     }
-    .p-buy-btn {
-        margin-left: 20px;
-    }
     .p-discount {
         position: absolute;
         left: 30px;
@@ -610,14 +600,10 @@
         z-index: 100;
         border-radius: 3px;
     }
-    .product-feed .p-discount {
-        display: none;
-    }
-
     .product-slider-heading {
         flex: 1; /* Allows the h3 to take up remaining space */
         text-align: left; /* Centers the text horizontally */
-
+        padding-left: 20px;
     }
     .product-nav-row {
         display: flex;
@@ -694,13 +680,26 @@
         padding: 4px 16px;
         border: none;
         border-radius: 6px;
-        background-color: var(--first-transparent-2);
+        background-color: var(--first-transparent);
         transition: color 0.2s ease, box-shadow 0.2s ease;
     }
     .choice:hover {
         color: var(--salmon-pink);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+    
     
     @media(max-width:500px) {
         .product-box{
@@ -710,6 +709,7 @@
             width: 100%;
         }
         .product-slider-heading{
+            text-align: center;
             font-size: 1.3rem;
             display: flex;
         }
@@ -736,11 +736,9 @@
         }
     }
     @media (max-width: 500px) {
-        .nav-menu.active {
+        .nav-menu {
             gap: 40px;
-            background-color: var(--first-transparent-3);
-            backdrop-filter: blur(10px); /* Blur effect */
-            -webkit-backdrop-filter: blur(10px); /* For Safari */
+            background-color: var(--first);
         }
         .gallery .card {
             height: 200px;
@@ -749,13 +747,13 @@
         .product-feed {
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust grid columns for smaller screens */
         }
+    
         .feed-controls {
             flex-wrap: wrap; /* Allow controls to wrap to a new line if necessary */
             justify-content: flex-start; /* Adjust alignment to start for smaller screens */
         }
         .filters {
             margin-top: 10px;
-            gap: 10px;
         }
         
         .choice {
